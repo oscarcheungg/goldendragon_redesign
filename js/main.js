@@ -6,25 +6,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add smooth scrolling to all navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             const targetId = this.getAttribute('href');
-            
-            // Skip if it's an external link or doesn't start with #
-            if (!targetId || !targetId.startsWith('#')) {
-                return;
-            }
-            
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                const headerHeight = document.querySelector('.header').offsetHeight;
-                const targetPosition = targetElement.offsetTop - headerHeight - 20;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+
+            // Only act on internal links
+            if (targetId && targetId.startsWith('#')) {
+                e.preventDefault();
+
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight + 100;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });
