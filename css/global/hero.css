@@ -1,0 +1,197 @@
+.hero {
+    padding-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.heroContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+}
+
+.heroText {
+    flex: 1;
+    max-width: 770px;
+}
+
+.heroText h1 {
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    position: relative;
+    width: 770px;
+}
+
+.heroText h1 .savor {
+    font-size: 92px;
+    display: inline-block;
+    margin-right: 0.2em;
+}
+
+.flavorsWrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: -0.2em;
+    padding: 0.2em 0;
+}
+
+.redBanner {
+    position: absolute;
+    width: 120%;
+    left: -10%;
+    top: 50%;
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: center;
+    z-index: 0;
+    animation: bannerExpand 1.2s ease-out 0.8s forwards;
+}
+
+.heroText h1 .flavors {
+    color: var(--white);
+    position: relative;
+    display: inline-block;
+    font-size: 92px;
+    z-index: 1;
+    padding: 0 0.2em;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: flavorsReveal 0.5s ease-out 0.5s forwards;
+}
+
+.heroText h1 .cuisine {
+    font-size: 92px;
+    display: inline-block;
+    padding-bottom: 0.4em;
+}
+
+.heroText p {
+    font-size: 24px;
+    color: var(--black);
+    margin-bottom: 2rem;
+    font-weight: 400;
+    max-width: 700px;
+    line-height: 150%;
+}
+
+.normalTextRegular {
+    padding-bottom: 2em;
+}
+
+.menuButton {
+    background: var(--black);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.menuButton:hover {
+    background-color: #333333;
+}
+
+.downArrow {
+    width: 20px;
+}
+
+.heroImages {
+    flex: 0 1 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.mainImage {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+}
+
+@keyframes bannerExpand {
+    0% {
+        transform: translateY(-50%) scaleX(0);
+    }
+    100% {
+        transform: translateY(-50%) scaleX(1);
+    }
+}
+
+@keyframes flavorsReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 75px;
+        min-height: 80vh;
+    }
+
+    .heroContent {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+        padding: 1rem;
+        margin-top: 3rem;
+    }
+    
+    .heroText h1 .savor,
+    .heroText h1 .flavors,
+    .heroText h1 .cuisine {
+        font-size: 48px;
+        display: block;
+    }
+
+    .heroText h1 .savor {
+        margin: -0.5em 0;
+    }
+
+    .heroText h1 .flavors {
+        margin: 0.1em 0;
+    }
+
+    .heroText h1 .cuisine {
+        margin: 0.1em 0;
+    }
+
+    .heroText h1 {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .heroText p {
+        font-size: 18px;
+        margin-bottom: 2rem;
+    }
+
+    .menuButton {
+        padding: 0.75rem 1.5rem;
+        font-size: 16px;
+    }
+    
+    .heroImages {
+        margin-left: 0;
+        padding-top: 1rem;
+    }
+
+    .mainImage {
+        max-width: 200px;
+    }
+}

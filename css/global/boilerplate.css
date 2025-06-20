@@ -1,0 +1,73 @@
+:root {
+    /* Brand Colors */
+    --primary: #8A1E2D;
+    --secondary: #F5F1E9;
+    --accent: ##C28B00;
+
+    /* Neutral Colors */
+    --black: #222222;
+    --gray: #E2E2E2;
+    --white: #FFFFFF;
+
+    /* Gradient */
+    --golden-dragon-gradient: linear-gradient(to right, #8A1E2D, ##C28B00);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.5;
+    color: var(--black);
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Eb Garamond', serif;
+}
+
+.largeTitle {
+    font-size: 96px;
+    width: 100%;
+    max-width: 770px;
+}
+
+.sectionTitle {
+    font-size: 48px;
+}
+
+.subTitle {
+    font-size: 32px;
+}
+
+.normalTextBold {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.normalTextRegular {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.smallTextBold {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.smallTextRegular {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.sectionSubtitle {
+    font-family: 'Eb Garamond', serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--primary);
+}
